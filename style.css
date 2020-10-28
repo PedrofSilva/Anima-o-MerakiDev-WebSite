@@ -1,7 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*****************************   STROKE DA LOGO LINHAS  ***************************/
+.md-animacao-logo-merakidev {
+    width: 100mm;
+    height: 100mm;
+    margin: auto;
+    margin-top: 100px;
+
+    stroke-dashoffset: 30000;
+    stroke-dasharray: 30000;
+    animation: svgAnimationLogoMerakiDev 5s ease-in-out forwards;
+}
+/*****************************  FIM DO STROKE DA LOGO LINHAS  ***************************/
+
+/*****************************   FILL COLOR PREENCHIMENTO   ***************************/
+.fil-parte1, .fil-parte2, .fil-parte3, .fil-parte4, .fil-parte5, .fil-parte6 {
+    fill-opacity: 0;
+    animation: svgAnimationLogoMerakiDevOpacity 0.5s ease-in-out forwards;
+    animation-delay: 2.5s;
+}
+/*****************************  FIM DO FILL COLOR PREENCHIMENTO   ***************************/
+
+
+/*****************************   AGRUPAMENTO DA LOGO   ***************************/
 .md-logo-merakidev-parte1, .md-logo-merakidev-parte2, .md-logo-merakidev-parte3, .md-logo-merakidev-parte4, .md-logo-merakidev-parte5 {
     position: absolute;
 }
-    
+
 .md-logo-merakidev-parte2, .md-logo-merakidev-parte3 {
     z-index: 99999;
 }
+/***************************** FIM DO AGRUPAMENTO DA LOGO   ***************************/
+
+
+
+/************************************  keyframes DAS ANIMAÇÕES  ***********************************************/
+@keyframes svgAnimationLogoMerakiDev {
+    0%{
+        stroke-dashoffset: 30000;
+    }
+    70% {
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset:0;
+    }
+}
+
+@keyframes svgAnimationLogoMerakiDevOpacity {
+    to {
+        fill-opacity: 1;
+    }
+}
+
+/************************************ FIM DAS keyframes DAS ANIMAÇÕES  ***********************************************/
