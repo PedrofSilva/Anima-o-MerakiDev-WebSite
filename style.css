@@ -1,4 +1,7 @@
-.md-logo-merakidev-parte1 {
-    width: 300px;
+.md-logo-merakidev-parte1, .md-logo-merakidev-parte2, .md-logo-merakidev-parte3, .md-logo-merakidev-parte4, .md-logo-merakidev-parte5 {
+    position: absolute;
 }
     
+.md-logo-merakidev-parte2, .md-logo-merakidev-parte3 {
+    z-index: 99999;
+}
