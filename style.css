@@ -4,23 +4,95 @@ body{
 }
 
 /*****************************   STROKE DA LOGO LINHAS  ***************************/
+
 .md-animacao-logo-merakidev {
     width: 100mm;
     height: 100mm;
     margin: auto;
-    margin-top: 100px;
-
-    stroke-dashoffset: 30000;
+    margin-top: 200px;
+    
+    /*stroke-dashoffset: 30000;*/
     stroke-dasharray: 30000;
-    animation: svgAnimationLogoMerakiDev 5s ease-in-out forwards;
+    animation: svgAnimationLogoMerakiDevLinhas 3s ease-in-out forwards;
+    animation-delay: 1.1s;
+    
 }
+
+.fil-parte5, .fil-parte6 {
+    stroke-width: 20px;
+    fill-opacity: 0;
+    stroke-opacity: 0;
+    animation: svgAnimationLogoMerakiDevParte5 0.5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.fil-parte1 {
+    stroke-width: 50px;   
+    stroke-opacity: 0;
+    fill-opacity: 0;
+    animation: svgAnimationLogoMerakiDevParte1 1s forwards;
+    animation-delay: 1s;
+    
+}
+
+.fil-parte2 {
+    stroke-width: 50px;   
+    stroke-opacity: 0;
+    fill-opacity: 0;
+    animation: svgAnimationLogoMerakiDevParte2 2s forwards;
+}
+
+.fil-parte3 {
+    stroke-width: 50px;   
+    stroke-opacity: 1;
+    fill-opacity: 0;
+}
+
+.fil-parte4 {
+    stroke-width: 50px;   
+    stroke-opacity: 1;
+    fill-opacity: 0;
+}
+
+.md-logo-merakidev-parte1 {
+    width: 100mm;
+    height: 100mm;
+    animation: svgAnimationLogoMerakiDevPositionYParte1 1s forwards;
+    animation-delay: 1s;
+}
+
+.md-logo-merakidev-parte2 {
+    width: 100mm;
+    height: 100mm;
+    animation: svgAnimationLogoMerakiDevParte2 2s forwards;
+}
+
+.md-logo-merakidev-parte3 {
+    width: 132mm;
+    height: 100mm;
+}
+
+.md-logo-merakidev-parte4 {
+    transform: translateX(-120mm);
+    width: 100mm;
+    height: 100mm;
+}
+
+.md-logo-merakidev-parte5 {
+    width: 100mm;
+    height: 100mm;
+}
+
 /*****************************  FIM DO STROKE DA LOGO LINHAS  ***************************/
 
 /*****************************   FILL COLOR PREENCHIMENTO   ***************************/
-.fil-parte1, .fil-parte2, .fil-parte3, .fil-parte4, .fil-parte5, .fil-parte6 {
+.fil-parte1 {
+   animation: svgAnimationLogoMerakiDevOpacityParte1 5s forwards;
+}
+
+.fil-parte2, .fil-parte3, .fil-parte4, .fil-parte5, .fil-parte6 {
     fill-opacity: 0;
-    animation: svgAnimationLogoMerakiDevOpacity 0.5s ease-in-out forwards;
-    animation-delay: 2.5s;
+    animation: svgAnimationLogoMerakiDevOpacity 5s forwards;
 }
 /*****************************  FIM DO FILL COLOR PREENCHIMENTO   ***************************/
 
@@ -35,24 +107,251 @@ body{
 }
 /***************************** FIM DO AGRUPAMENTO DA LOGO   ***************************/
 
+/******************************** ANIMACAO PARTE POR PARTE *******************************/
+.md-logo-merakidev-rotate-parte3 {
+    transform: rotate(90deg);
+    animation: svgAnimationLogoMerakiDevRotateParte3 0.2s linear forwards;
+    animation-delay: 0.599s;
+}
+.md-logo-merakidev-posicaoy-parte2 {
+    margin-top: -20px;
+    transform: rotate(15deg);
+    animation: svgAnimationLogoMerakiDevPosicaoYParte2 0.18s linear forwards;
+    animation-delay: 0.92s;
 
+}
+/*
+.md-logo-merakidev-rotate-parte3 {
+    animation: svgAnimationLogoMerakiDevTransformYParte3 1s linear forwards;
+    animation-delay: 0.599s;
+}
+*/
+.md-logo-merakidev-parte1 {
+
+}
+
+.md-logo-merakidev-parte2 {
+
+}
+
+.md-logo-merakidev-parte3 {
+    animation: svgAnimationLogoMerakiDevParte3 1s forwards;
+}
+
+.md-logo-merakidev-parte4 {
+    animation: svgAnimationLogoMerakiDevParte4 1s forwards;
+}
+
+/******************************** FIM DA ANIMACAO PARTE POR PARTE *******************************/
 
 /************************************  keyframes DAS ANIMAÇÕES  ***********************************************/
-@keyframes svgAnimationLogoMerakiDev {
+
+@keyframes svgAnimationLogoMerakiDevLinhas {
     0%{
-        stroke-dashoffset: 30000;
-    }
-    70% {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 60000;
     }
     100%{
-        stroke-dashoffset:0;
+        stroke-dashoffset: 0;
     }
 }
 
 @keyframes svgAnimationLogoMerakiDevOpacity {
-    to {
+    0%{
+        stroke-opacity: 0;
+        fill-opacity: 0;
+    }
+    20%{
+        stroke-opacity: 1;
+        fill-opacity: 0;
+    }
+    90%{
+        stroke-opacity: 1;
+        fill-opacity: 0;
+    }
+    100% {
+        stroke-opacity: 1;
         fill-opacity: 1;
+    }
+}
+
+@keyframes svgAnimationLogoMerakiDevOpacityParte1{
+    0%{
+        stroke-opacity: 0;
+        fill-opacity: 0;
+    }
+    20% {
+        stroke-opacity: 0;
+        fill-opacity: 0;
+    }
+    22% {
+        stroke-opacity: 1;
+        fill-opacity: 0;
+    }
+    90% {
+        stroke-opacity: 1;
+        fill-opacity: 0;
+    }
+    100% {
+        stroke-opacity: 1;
+        fill-opacity: 1;
+    }
+}
+
+@keyframes svgAnimationLogoMerakiDevParte4 {
+    0% {
+        width: 100mm;
+        transform: translateX(calc(-120mm - 100mm));
+    }
+    60% {
+        width: 118mm;
+        transform: translateX(calc(120mm - 100mm));
+    }
+    80% {
+        width: 118mm;
+        transform: translateX(calc(120mm - 100mm));
+    }
+    100%{
+        width: 100mm;
+        transform: translateX(calc(100mm - 100mm));
+    }
+}
+
+@keyframes svgAnimationLogoMerakiDevParte3 {
+    0% {
+        width: 132mm;
+        transform:  translateX(calc(132mm - 132mm));
+    }
+    50% {
+        width: 150mm;
+        transform:  translateX(calc(10mm - 132mm));
+    }
+    80% {
+        width: 150mm;
+        transform:  translateX(calc(10mm - 132mm));
+    }
+    100%{
+        width: 100mm;
+        transform:  translateX(calc(100mm - 100mm));
+    }
+}
+
+@keyframes svgAnimationLogoMerakiDevRotateParte3 {
+    0% {
+        transform: rotate(90deg);
+        width: 132mm;
+    }
+    100% {
+        transform: rotate(360deg);
+        width: 100mm;
+    }
+}
+
+@keyframes svgAnimationLogoMerakiDevParte2 {
+    0% {
+        stroke-opacity: 0;
+        width: 100mm;
+        transform: translateX(calc(65mm - 100mm));
+    }
+    13% {
+        stroke-opacity: 0;
+        width: 100mm;
+        transform: translateX(calc(65mm - 100mm));
+    }
+    14% {
+        stroke-opacity: 1;
+        width: 100mm;
+        transform: translateX(calc(65mm - 100mm));
+    }
+    30%{
+        stroke-opacity: 1;
+        width: 120mm;
+        transform: translateX(calc(65mm - 100mm));
+    }
+    48% {
+        stroke-opacity: 1;
+        width: 100mm;
+        transform: translateX(calc(65mm - 100mm));
+    }
+    53%{
+        width: 100mm;
+        transform: translateX(calc(100mm - 100mm));
+    }
+    83%{
+        width: 100mm;
+        transform: translateX(calc(100mm - 100mm));
+    }
+    95%{
+        transform: translateX(calc(100mm - 100mm));
+    }
+    100% {
+        stroke-opacity: 1;
+        width: 100mm;
+        transform: translateX(calc(100mm - 100mm));        
+    }
+}
+
+@keyframes svgAnimationLogoMerakiDevPosicaoYParte2 {
+    0% {
+        margin-top: -20px;
+        transform: rotate(15deg);
+    }
+    60%{
+        margin-top: -20px;
+        transform: rotate(15deg);
+    }
+    61%{
+        margin-top: 0;
+        transform: rotate(0deg);
+    }
+    100% {
+        margin-top: 0;
+        transform: rotate(0deg);
+    }
+}
+@keyframes svgAnimationLogoMerakiDevParte1 {
+    0%{
+
+        stroke-opacity: 0;
+    }
+    5%{
+
+        stroke-opacity: 1;
+
+    }
+    80%{
+        stroke-opacity: 1;
+
+    }
+    95%{
+        stroke-opacity: 1;
+    }
+    100%{
+        stroke-opacity: 1;
+
+    }
+}
+
+@keyframes svgAnimationLogoMerakiDevPositionYParte1 {
+    0%{
+        transform: translateY(calc(180mm - 100mm));
+    }
+    15%{
+        transform: translateY(calc(100mm - 100mm));
+    }
+    100%{
+        transform: translateY(calc(100mm - 100mm));
+    }
+}
+
+@keyframes svgAnimationLogoMerakiDevParte5 {
+    0%{
+        stroke-opacity: 0;
+    }
+    10%{
+        stroke-opacity: 1;
+    }
+    100%{
+        stroke-opacity: 1;
     }
 }
 
